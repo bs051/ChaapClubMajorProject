@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ChaapClubMajorProject.Models.ChaapClub>
+
+@{
+    ViewData["Title"] = "ViewFoodByExpo";
+}
+
+<h1>View Food</h1>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-4">
+            <div class="card h-100 border-primary">
+                <center>
+                    <img src="~/foodphotos/@item.ClubID@item.Extension" alt="" style="width:100%">
+                </center>
+                <h1> @Html.DisplayFor(modelItem => item.FoodName)</h1>
+                <p class="title"> Price  :$ @Html.DisplayFor(modelItem => item.Price)</p>
+                <p class="title"> Your Choice : @Html.DisplayFor(modelItem => item.YourChoice.ChoiceName)</p>
+                <p class="title"> @Html.DisplayFor(modelItem => item.Description)</p>
+                <p><a asp-controller="OrderPlaceds"  asp-action="Create" class="btn btn-primary">Place Order</a></p>
+            </div>
+        </div>
+    }
+</div>

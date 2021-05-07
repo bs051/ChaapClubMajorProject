@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ChaapClubMajorProject.Models.FoodExpo>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4" style="margin-bottom:50px;">Available Food Expo</h1>
+    </div>
+    <div class="row" style="margin-bottom:50px;">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="card w-100">
+                    <center>
+                        <img src="~/slide/plate.png" alt="" style="width:100%">
+                    </center>
+                    <div class="card-body">
+                        <h5 class="card-text">
+                            @item.ExpoName
+                        </h5>
+                        <a class="btn btn-primary" asp-action="ViewFoodByExpo" asp-route-id="@item.ExpoID">View Product</a>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>

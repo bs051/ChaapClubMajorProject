@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ChaapClubMajorProject.Models.ChaapClub>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Food Details</h1>
+
+<p>
+    <a asp-action="Create">Add New Food Item</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YourChoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpoFood)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FoodName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YourChoice.ChoiceName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpoFood.ExpoName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ClubID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ClubID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ClubID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
