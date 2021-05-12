@@ -1,11 +1,12 @@
-INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'6038e952-5a05-48e9-aa24-657f643804ee', N'7bf614ea-26e0-4f2e-8d0a-c1b8442ea18d')
+USE [ChaapClub_DB]
 GO
-INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'6038e952-5a05-48e9-aa24-657f643804ee', N'powerAdmin@ChaapClub.com', N'POWERADMIN@CHAAPCLUB.COM', N'powerAdmin@ChaapClub.com', N'POWERADMIN@CHAAPCLUB.COM', 1, N'AQAAAAEAACcQAAAAEAEGVwcnOxPuF4PgZZ8BO5Z4BXGkhKUPvnPOJ6PMWfwsdGtyiiA4UZ1qiVZq+kC3IA==', N'2STIVAX72HUFDS6SXMWLU7DYGKMQE6MY', N'b681a5de-e175-4e28-8245-5317f13eec21', NULL, 0, 0, NULL, 1, 0)
+INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'25b143a4-b063-488d-acea-93e5ce7550e3', N'power', N'power', N'7855b554-987a-46dd-8a04-5ce9b465df24')
 GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'36a5d715-55a6-4816-942c-f988dae7fc0d', N'Navjot@gmail.com', N'NAVJOT@GMAIL.COM', N'Navjot@gmail.com', N'NAVJOT@GMAIL.COM', 1, N'AQAAAAEAACcQAAAAEELqW52kegjk22sQ+ByP9auWXG3Ykjldf7fg/bCO56du05QsXaR4Z+TNsVxKShPkxg==', N'XM7GERSIH7YPX47RBATEZODVNHET5DKU', N'e18a9b0c-004e-4cf8-80c4-91b092c4781c', NULL, 0, 0, NULL, 1, 0)
 GO
-INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'7bf614ea-26e0-4f2e-8d0a-c1b8442ea18d', N'power', N'power', N'168ebe74-34a0-4906-be15-17c0040a0c15')
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'4485333a-4eab-4fdc-a81f-aa8d4f15ed45', N'powerAdmin@ChaapClub.com', N'POWERADMIN@CHAAPCLUB.COM', N'powerAdmin@ChaapClub.com', N'POWERADMIN@CHAAPCLUB.COM', 1, N'AQAAAAEAACcQAAAAEHY5YkuMuxHPRskrwKGJvZLuVUV1CpeOPHYGOZ6h3D607Rn0u/yypx3u1NBpnaXBGQ==', N'ABE5LZEW5MFMSK6VW5OOJF4YRXIMCRRE', N'12ffc196-5571-4710-9b54-f96d396cea77', NULL, 0, 0, NULL, 1, 0)
 GO
-INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount]) VALUES (N'dfe1e8d6-8678-4af7-82b2-6fd0c2039d99', N'Navjot@gmail.com', N'NAVJOT@GMAIL.COM', N'Navjot@gmail.com', N'NAVJOT@GMAIL.COM', 1, N'AQAAAAEAACcQAAAAELh75wZQTs586Unh/UU3rYHvp1z+V7ZfX7cX/oqE+j2CRaBuChBi61qKij6x65ddOg==', N'2PJ3UQIR562NPPWS545UWMG2B5LGCAOD', N'a9065e20-d4c7-47f6-8388-d2fada4b9e5f', NULL, 0, 0, NULL, 1, 0)
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'4485333a-4eab-4fdc-a81f-aa8d4f15ed45', N'25b143a4-b063-488d-acea-93e5ce7550e3')
 GO
 SET IDENTITY_INSERT [dbo].[YourChoices] ON 
 GO
@@ -27,7 +28,6 @@ INSERT [dbo].[FoodExpos] ([ExpoID], [ExpoName]) VALUES (3, N'Paneer')
 GO
 INSERT [dbo].[FoodExpos] ([ExpoID], [ExpoName]) VALUES (4, N'Wonton Momos')
 GO
-
 SET IDENTITY_INSERT [dbo].[FoodExpos] OFF
 GO
 SET IDENTITY_INSERT [dbo].[ChaapClubs] ON 
@@ -66,4 +66,3 @@ INSERT [dbo].[ChaapClubs] ([ClubID], [FoodName], [Description], [Extension], [Pr
 GO
 SET IDENTITY_INSERT [dbo].[ChaapClubs] OFF
 GO
- 
