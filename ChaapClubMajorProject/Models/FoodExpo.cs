@@ -11,6 +11,7 @@ namespace ChaapClubMajorProject.Models
         [Key]
         public int ExpoID { get; set; }
 
+
         [Required]
         [StringLength(100)]
         public string ExpoName { get; set; }
